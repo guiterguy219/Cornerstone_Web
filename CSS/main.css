@@ -1,5 +1,167 @@
 body {
-  background-color: gray;
+  background-color: white;
 
-  color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  color: rgb(60,60,60);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 5vw;
+
+  margin: 0;
+  margin-top: 25px;
+}
+
+h2 {
+  font-size: 24pt;
+
+  margin: 0;
+  margin-top: 25px;
+}
+
+.gridz {
+  align-self: center;
+  width: 80vw;
+
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
+
+  margin-top: 30px;
+}
+
+.navbar {
+  background-color: rgb(32,32,32);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  color: white;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 4px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo-title {
+  font-size: 14pt;
+}
+
+.nav-logo-subtitle {
+  font-size: 8.5pt;
+}
+
+.nav-number {
+  font-size: 18pt;
+}
+
+.main-div {
+  /*border: black dotted 1px;*/
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-banner {
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.header {
+  padding: 0;
+
+  margin-top: 50px;
+}
+
+#temp-banner-img {
+  min-width: 100vw;
+  min-height: 10vh;
+  max-height: 30vh;
+  overflow: hidden;
+}
+
+.intro {
+  align-self: center;
+
+  width: 80vw;
+
+  margin-top: 50px;
+}
+
+#main-logo {
+  width: 100%;
+}
+
+.header-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18pt;
+  color: rgb(92,92,92);
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact p {
+  margin: 0;
+  margin-top: 25px;
+}
+
+.footer {
+  background-color: black;
+
+  margin-top: 50px;
+
+  height: 100px;
 }
