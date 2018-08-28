@@ -10,37 +10,36 @@
   <!--JS LINK-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body>
-  <div class="navbar">
-    <div class="navbar-left">
-      <div class="navbar-menu-toggle" onclick="toggle_menu()">
-        <i class="material-icons">menu</i>
+<body onscroll="select_menu()" onresize="set_elPos(), menu_open()">
+  <div class="navbarz">
+    <div class="nav-logo nav-item">
+      <div class="nav-logo-title">
+        Cornerstone
       </div>
-      <div class="nav-logo nav-item">
-        <div class="nav-logo-title">
-          Cornerstone
-        </div>
-        <div class="nav-logo-subtitle">
-          Home Inspections, LLC
-        </div>
+      <div class="nav-logo-subtitle">
+        Home Inspections, LLC
       </div>
     </div>
-    <div class="nav-number nav-item">
-      (385) 309-3164
+    <div class="toggle-menu" onclick="toggle_menu()">
+      <i class="material-icons">menu</i>
+    </div>
+    <div class="menu" id="menu">
+      <div class="menu-item" id="menu-home" onclick="scrollTo_home()">
+          Home
+      </div>
+      <div class="menu-item" style="display: none" id="menu-about">
+        About
+      </div>
+      </a>
+      <div class="menu-item" id="menu-faqs" onclick="scrollTo_faqs()">
+        FAQ's
+      </div>
+      <div class="menu-item" id="menu-contact" onclick="scrollTo_contactz()">
+        Contact
+      </div>
     </div>
   </div>
-  <div class="menu" id="menu">
-    <div class="menu-item" id="menu-home">
-      <a href="index.html" style="border-bottom: rgb(82,172,230) solid 5px">Home</a>
-    </div>
-    <div class="menu-item" id="menu-about">
-      <a href="HTML/about.html">About</a>
-    </div>
-    <div class="menu-item" id="menu-faqs">
-      <a href="HTML/faqs.html">FAQ's</a>
-    </div>
-  </div>
-  <div class="main-div img-banner">
+  <div class="main-div img-banner" id="img-banner" id="top">
     <img src="Imgs/temp-banner-img.jpg" id="temp-banner-img"/>
   </div>
   <div class="main-div header" style="display: none;">
@@ -60,8 +59,65 @@
       </p>
     </div>
   </div>
-  <div class="contact">
-    <h2 style="display: none">Contact:</h2>
+  <div class="faqs" id="faqs">
+    <h2>FAQ's</h2>
+    <div class="faq-bundle" id="faq-1">
+      <div class="faq-q" id="faq-1-q" onclick="reveal_faqA(1)">
+        What is a home inspection?
+      </div>
+      <div class="faq-a" id="faq-1-a">
+        The answer to your question is not yet revealed. Seek further inspiration by contacting your
+        local spirit guides via one of the mediums below.
+      </div>
+    </div>
+    <div class="faq-bundle" id="faq-2">
+      <div class="faq-q" id="faq-2-q" onclick="reveal_faqA(2)">
+        Who performs the inspection?
+      </div>
+      <div class="faq-a" id="faq-2-a">
+        The answer to your question is not yet revealed. Seek further inspiration by contacting your
+        local spirit guides via one of the mediums below.
+      </div>
+    </div>
+    <div class="faq-bundle" id="faq-3">
+      <div class="faq-q" id="faq-3-q" onclick="reveal_faqA(3)">
+        Why is an inspection needed?
+      </div>
+      <div class="faq-a" id="faq-3-a">
+        The answer to your question is not yet revealed. Seek further inspiration by contacting your
+        local spirit guides via one of the mediums below.
+      </div>
+    </div>
+    <div class="faq-bundle" id="faq-4" onclick="reveal_faqA(4)">
+      <div class="faq-q" id="faq-4-q">
+        How can I trust my home inspector?
+      </div>
+      <div class="faq-a" id="faq-4-a">
+        The answer to your question is not yet revealed. Seek further inspiration by contacting your
+        local spirit guides via one of the mediums below.
+      </div>
+    </div>
+    <div class="faq-bundle" id="faq-5">
+      <div class="faq-q" id="faq-5-q" onclick="reveal_faqA(5)">
+        Are home inspections required?
+      </div>
+      <div class="faq-a" id="faq-5-a">
+        The answer to your question is not yet revealed. Seek further inspiration by contacting your
+        local spirit guides via one of the mediums below.
+      </div>
+    </div>
+    <div class="faq-bundle" id="faq-6">
+      <div class="faq-q" id="faq-6-q" onclick="reveal_faqA(6)">
+        How long does an inspection usually take?
+      </div>
+      <div class="faq-a" id="faq-6-a">
+        The answer to your question is not yet revealed. Seek further inspiration by contacting your
+        local spirit guides via one of the mediums below.
+      </div>
+    </div>
+  </div>
+  <div class="contact" id="contactz">
+    <h2>Contact</h2>
     <div class="contact-gridz">
       <a href="tel:+13853093164">
         <div class="contact-gridz-item">

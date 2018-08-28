@@ -32,9 +32,6 @@ h1 {
 h2 {
   font-size: 24pt;
 
-  margin: 0;
-  margin-top: 25px;
-
   /*border-bottom: gray solid 1px;
 
   box-shadow: 0 10px 15px -8px rgb(100,100,100);
@@ -54,9 +51,11 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   margin-top: 80px;
+
+  text-align: center;
 }
 
-.navbar {
+.navbarz {
   background-color: rgb(82,172,230);
 
   display: flex;
@@ -70,8 +69,6 @@ h2 {
   right: 0;
   top: 0;
   height: 60px;
-  padding-left: 15px;
-  padding-right: 15px;
 
   color: white;
 }
@@ -106,6 +103,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-left: 15px;
 }
 
 .nav-logo-title {
@@ -120,30 +119,42 @@ h2 {
   font-size: 12pt;
 }
 
+.toggle-menu {
+  display: none;
+}
+
 .menu {
   background-color: rgb(50,50,50);
 
-  position: fixed;
-  top: 60px;
-  width: 100vw;
-
-  margin: 0;
-
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .menu-item {
-  padding: 15px;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.menu-item a {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  border: rgb(50,50,50) solid 5px;
+
   color: white;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: none;
+}
+
+.menu-item:hover {
+  color: rgb(200,200,200);
+  cursor: pointer;
 }
 
 .main-div {
@@ -157,7 +168,7 @@ h2 {
   align-items: center;
 }
 
-.img-banner {
+#img-banner {
   margin-top: 60px;
   overflow: hidden;
 }
@@ -198,13 +209,82 @@ h2 {
   text-align: center;
 }
 
-.contact {
+.faqs {
+  background-color: rgb(210,210,210);
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
-  margin-top: 30px;
+  margin-top: 60px;
+  padding-bottom: 25px;
+}
+
+.faqs h2 {
+  background-color: white;
+  align-self: stretch;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.faq-bundle {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 500px;
+  max-width: 90vw;
+}
+
+.faq-q {
+  background-color: rgb(22,152,250);
+  border-radius: 5px;
+  padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16pt;
+  color: white;
+}
+
+.faq-q:hover {
+  cursor: pointer;
+
+  background-color: rgb(2,132,200);
+}
+
+.faq-a {
+  align-self: center;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  color: rgb(100,100,100);
+  text-align: center;
+
+  padding: 7px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  font-size: 16pt;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact h2 {
+  background-color: rgb(210,210,210);
+  align-self: stretch;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-top: 35px;
 }
 
 .contact-gridz {
@@ -216,7 +296,7 @@ h2 {
 
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .contact-gridz-item {
@@ -235,6 +315,7 @@ h2 {
 
   color: rgb(60,60,60);
   font-weight: bold;
+  text-align: center;
 }
 
 .contact-gridz-item i {
@@ -255,10 +336,11 @@ h2 {
 
 .footer {
   background-color: rgb(70,70,70);
+  border-top: rgb(22,152,250) solid 30px;
 
-  margin-top: 80px;
+  margin-top: 160px;
 
-  height: 100px;
+  height: 200px;
 
   display: flex;
   flex-direction: column;
@@ -266,4 +348,29 @@ h2 {
   align-items: center;
 
   color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .toggle-menu {
+    display: flex;
+
+    align-self: center;
+    padding: 15px;
+
+    font-size: 20pt;
+  }
+
+  .toggle-menu:hover {
+    cursor: pointer;
+    color: rgb(200,200,200);
+  }
+
+  .menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+
+    height: 40px;
+  }
 }
