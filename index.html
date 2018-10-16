@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--TITLE-->
-  <link rel="shortcut icon" type="image/x-icon"href="Imgs/Icons/cornerstone_icon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="Imgs/Icons/cornerstone_icon.ico" />
   <title>Cornerstone Home Inspections, LLC</title>
   <!--CSS LINKS-->
-  <link href="CSS/main.css" type="text/css"rel="stylesheet"/>
+  <link href="CSS/main.css" type="text/css" rel="stylesheet" id="stylez"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!--JS LINK-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body onscroll="select_menu()" onresize="set_elPos(), menu_open()">
+<body onscroll="select_menu()" onresize="set_elPos(), menu_open(), set_mobile()">
   <div class="navbarz">
     <div class="nav-logo nav-item">
       <div class="nav-logo-title">
@@ -30,7 +31,6 @@
       <div class="menu-item" style="display: none" id="menu-about">
         About
       </div>
-      </a>
       <div class="menu-item" id="menu-faqs" onclick="scrollTo_faqs()">
         FAQ's
       </div>
@@ -39,7 +39,7 @@
       </div>
     </div>
   </div>
-  <div class="main-div img-banner" id="img-banner" id="top">
+  <div class="main-div img-banner" id="top">
     <img src="Imgs/temp-banner-img.jpg" id="temp-banner-img"/>
   </div>
   <div class="main-div header" style="display: none;">
@@ -51,68 +51,86 @@
     </div>
     <div class="header-description">
       <p>
-        Cornerstone Home Inspections, LLC is a family-owned real estate
-        inspection company based in Provo that specializes in
-        residential home inspections.  As real estate investors
-        ourselves, we know how to help you sort out the gems from
-        the lemons.
+        <!--Welcome message here-->
+        Local, family-owned, and ready to make sure you are safe and
+        comfortable in your new home.
       </p>
     </div>
+  </div>
+  <div class="image-gridz" id="image-gridz">
+    <img src="Imgs/Gallery/1.jpeg" id="img1" class="image-gridz-item large" onclick="change_large('img1')"/>
+    <img src="Imgs/Gallery/2.jpeg" id="img2" class="image-gridz-item small" onclick="change_large('img2')"/>
+    <img src="Imgs/Gallery/5a.jpeg" id="img5a" class="image-gridz-item small" onclick="change_large('img5a')"/>
+    <img src="Imgs/Gallery/4.jpeg" id="img4" class="image-gridz-item small" onclick="change_large('img4')"/>
+    <img src="Imgs/Gallery/5b.jpeg" id="img5b" class="image-gridz-item small" onclick="change_large('img5b')"/>
   </div>
   <div class="faqs" id="faqs">
     <h2>FAQ's</h2>
     <div class="faq-bundle" id="faq-1">
       <div class="faq-q" id="faq-1-q" onclick="reveal_faqA(1)">
-        What is a home inspection?
+        What is included in a home inspection?
       </div>
       <div class="faq-a" id="faq-1-a">
-        The answer to your question is not yet revealed. Seek further inspiration by contacting your
-        local spirit guides via one of the media below.
+        <!--Enter Answer 1 Here--> What is a home inspection? A home inspection is a non-invasive,
+        visual inspection of important systems and components in your home.  Home inspectors help
+        you identify problems that could pose a safety hazard or cost you financially.
+
+        The scope of a home inspection varies a bit depending on the company.
+        At Cornerstone, we strive to provide you with the most thorough inspection possible, following
+        InterNACHI's Standards of Practice. This includes a detailed report of the roof, exterior, interior, attic, HVAC, plumbing,
+        and electrical as well as any attached garages or decks.  If you have questions about what we cover, call or text us at 385-309-3164.
+        For more information about InterNACHI's Standards of Practice, go to nachi.org/sop
+
       </div>
     </div>
     <div class="faq-bundle" id="faq-2">
       <div class="faq-q" id="faq-2-q" onclick="reveal_faqA(2)">
-        Who performs the inspection?
+        Why should I want a home inspection?
       </div>
       <div class="faq-a" id="faq-2-a">
-        The answer to your question is not yet revealed. Seek further inspiration by contacting your
-        local spirit guides via one of the media below.
+        <!--Enter Answer 2 Here-->
       </div>
     </div>
     <div class="faq-bundle" id="faq-3">
       <div class="faq-q" id="faq-3-q" onclick="reveal_faqA(3)">
-        Why is an inspection needed?
+        What should I look for in a home inspector?
       </div>
       <div class="faq-a" id="faq-3-a">
-        The answer to your question is not yet revealed. Seek further inspiration by contacting your
-        local spirit guides via one of the media below.
+        <!--Enter Answer 3 Here--> Your first priority should be to find an inspector
+        with the right certification.
+
+        Home inspectors certified with the International Association of Certified Home inspectors
+        (InterNACHI) are held to the highest standards of quality in the industry.  Each
+        InterNACHI-certified inspector is required to pass a rigorous inspection exam
+        and perform several home inspections prior to certification.  At Cornerstone,
+        our inspectors are always InterNACHI certified.  For more information,
+        visit nachi.org
       </div>
     </div>
     <div class="faq-bundle" id="faq-4" onclick="reveal_faqA(4)">
       <div class="faq-q" id="faq-4-q">
-        How can I trust my home inspector?
-      </div>
-      <div class="faq-a" id="faq-4-a">
-        The answer to your question is not yet revealed. Seek further inspiration by contacting your
-        local spirit guides via one of the media below.
-      </div>
-    </div>
-    <div class="faq-bundle" id="faq-5">
-      <div class="faq-q" id="faq-5-q" onclick="reveal_faqA(5)">
-        Are home inspections required?
-      </div>
-      <div class="faq-a" id="faq-5-a">
-        The answer to your question is not yet revealed. Seek further inspiration by contacting your
-        local spirit guides via one of the media below.
-      </div>
-    </div>
-    <div class="faq-bundle" id="faq-6">
-      <div class="faq-q" id="faq-6-q" onclick="reveal_faqA(6)">
         How long does an inspection usually take?
       </div>
-      <div class="faq-a" id="faq-6-a">
-        The answer to your question is not yet revealed. Seek further inspiration by contacting your
-        local spirit guides via one of the media below.
+
+      <div class="faq-a" id="faq-4-a">
+        <!--Enter Answer 4 Here--> Times vary depending on a variety of factors,
+        but plan on your inspector spending about 3-4 hours.
+
+        Should I be there for the inspection?
+
+        Most home buyers find it valuable to arrive about 1 hour before the inspection
+        is complete and walk through the home with the inspector.  Being present for
+        the entire inspection is welcome but not required.
+
+        What sets Cornerstone Home Inspections apart from other inspection companies?
+
+        Each of our inspectors is certified with InterNACHI, the largest association
+        of real estate inspectors in the world.  We are meticulous and dedicated in
+        our reports, and each inspection report is delivered to you
+        in hard copy and online through state-of-the-art inspection software.
+        Friendly and accessible, we will stay in communication
+        with you long after the inspection is complete to answer questions, improve our
+        service, and help you maintain your home.
       </div>
     </div>
   </div>
